@@ -17,6 +17,8 @@ class BlogPost : Model, PathComponentExtracting {
     }
 }
 
+try Meow.init("mongodb://localhost/openkitten-backend")
+
 let server = try SyncWebServer()
 
 server.get("posts", ":post") { request in
